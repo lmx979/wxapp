@@ -1,0 +1,231 @@
+/**index.wxss**/
+
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: "iconfont";
+  /* Project id 3845003 */
+  src: url("data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAJcAAwAAAAABJwAAAINAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIjFgZgAEQKgjiCKAE2AiQDEAsOAAQgBYF8ByAbqQPIHomx7YItNHJuKm/i4eFy7/+75qDoAosSa2uccIDFEPBYovnQ/urtHsFKsf35hwQoyvkSiLb1JhcVAwfOqZtFigxoYAOaYfar7ZpAkURlx1NEGh8EYGdLwnkEiT5muNZnoRBCKdRAigX63IdozysU/CXiAgFl9nMzAatskjjBLuwAJ4a4Z70J9MAetH+bfM20GSjOSE4JSHkDVGrVFJg+ZR5T/BagGSSTzQO2b5uUFjX0UeVAxfsQTbLq4okuGjiCK3yiZMX76kmpvLykrHRddZBIaT2H4nRGiX5Cofk0iGLrAafeQAwBmrkpIqJrWalnRDGye0W+c7CMI84eQFhpciomaoHDaTnKZFdGxOx1u8txsfPxCxwOpqYTEThVT5z0rK/3nExMiAr19ZOemdzEEhJnx/sFMq5ZWa4kMNCVAWJcTQLIAGQvcd1394xksTZjvekVWQt+Bc8U38ZVxsYGiSnk9jaVBBoaGVWr/7slOzsnu7lFPN1ulfrukrTi2ZVYlyTlzhPm+yzF+8XXX7ZZ+t/GN8RXDKjLDfLfm6pkKK0Y+uoy8idODy1EFmdrbolPq++fq1vjE6UIwhCqZOpLMkaBowldqoTTNTPlx+oqHciRpkihzOS5cqEyZKmQL0UpG5asg3+7CRQkkAe35f0stLpTbNrMSBlKlcnp1r6gpUPl7zHGfxF2RggAAA==") format("woff2"),
+    url("//at.alicdn.com/t/c/font_3845003_yaw0lmtrwd.woff?t=1672690286456") format("woff"),
+    url("//at.alicdn.com/t/c/font_3845003_yaw0lmtrwd.ttf?t=1672690286456") format("truetype");
+}
+
+.header-input {
+  font-family: PingFangSC-Regular;
+  height: 72rpx;
+  border: 1rpx solid #d9dde1;
+  margin: 22rpx 36rpx 14rpx 36rpx;
+  border-radius: 36rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.header-input-placeholder {
+  font-family: PingFangSC-Regular, iconfont;
+  font-size: 26rpx;
+  color: rgba(133, 133, 133, 0.6);
+  line-height: 30rpx;
+}
+
+.nav {
+  display: flex;
+  height: 112rpx;
+  padding: 0 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  color: #2b333b;
+  line-height: 40rpx;
+  position: relative;
+}
+
+.nav-item-img {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
+}
+
+.nav-item.nav-item-active::after {
+  content: "";
+  width: 32rpx;
+  height: 6rpx;
+  border-radius: 5rpx;
+  position: absolute;
+  left: 70rpx;
+  bottom: 18rpx;
+}
+
+/* nav导航栏各标签颜色变化——start */
+.nav-item.nav-recommend.nav-item-active {
+  color: #f01414;
+}
+
+.nav-item.nav-recommend.nav-item-active::after {
+  background-color: #f01414;
+}
+
+.nav-item.nav-project.nav-item-active {
+  color: #d48e05;
+}
+
+.nav-item.nav-project.nav-item-active::after {
+  background-color: #d48e05;
+}
+
+.nav-item.nav-path.nav-item-active {
+  color: #9447eb;
+}
+
+.nav-item.nav-path.nav-item-active::after {
+  background-color: #9447eb;
+}
+
+.nav-item.nav-activity.nav-item-active {
+  color: #14a6f0;
+}
+
+.nav-item.nav-activity.nav-item-active::after {
+  background-color: #14a6f0;
+}
+
+/* nav导航栏各标签颜色变化——end */
+
+.swiper {
+  height: 232rpx;
+}
+
+.swiper-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-item-img {
+  width: 562rpx;
+  height: 186rpx;
+  border-radius: 12rpx;
+  transition: all 0.5s;
+}
+
+.swiper-item-active .swiper-item-img {
+  width: 702rpx;
+  height: 232rpx;
+}
+
+.recommend {
+  margin: 50rpx 0 20rpx 40rpx;
+}
+
+.recommend-title {
+  font-weight: bold;
+  font-size: 28rpx;
+  color: #2b333b;
+  line-height: 16rpx;
+  margin-bottom: 40rpx;
+}
+
+.recommend-nodata {
+  font-family: PingFangSC-Medium;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.recommend-item {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.recommend-item-left {
+  position: relative;
+}
+
+.recommend-item-left-img {
+  width: 208rpx;
+  height: 136rpx;
+  border-radius: 12rpx;
+  margin-right: 24rpx;
+}
+
+.recommend-item-left-progress {
+  font-family: PingFangSC-Regular;
+  font-size: 20rpx;
+  background: #2b333b;
+  color: #fff;
+  width: 108rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 12rpx 0;
+  position: absolute;
+  right: 24rpx;
+  top: 96rpx;
+}
+
+.recommend-item-left-new {
+  width: 80rpx;
+  height: 44rpx;
+  position: absolute;
+  left: -20rpx;
+  top: -10rpx;
+}
+
+.recommend-item-content {
+  width: 460rpx;
+  height: 136rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #d9dde1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.recommend-item-content-title {
+  font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  color: #2b333b;
+  line-height: 40rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.recommend-item-content-tags {
+  display: flex;
+}
+
+.recommend-item-content-tags view {
+  margin-right: 22rpx;
+}
+
+.recommend-item-content-tags-price {
+  font-family: PingFangSC-Medium;
+  font-size: 24rpx;
+  color: #f01414;
+  line-height: 32rpx;
+}
+
+.recommend-item-content-tags-notice {
+  font-family: PingFangSC-Regular;
+  font-size: 22rpx;
+  color: #f20d0d;
+  width: 168rpx;
+  height: 32rpx;
+  background: rgba(242, 13, 13, 0.1);
+  border-radius: 4rpx;
+  line-height: 32rpx;
+  text-align: center;
+}
+
+.recommend-item-content-tags-level,
+.recommend-item-content-tags-count {
+  font-family: PingFangSC-Regular, iconfont;
+  font-size: 24rpx;
+  color: #71777d;
+  line-height: 32rpx;
+}
