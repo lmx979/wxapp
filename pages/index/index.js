@@ -8,6 +8,33 @@ Page({
     swiperImgUrl: [], // 轮播图片地址数据
     recommendItemData: [], // 实战推荐信息数据
     searchResultArr: [], // 定义数组，用来存储搜索的结果
+    // 导航栏数据
+    navData: [{
+        name: "recommend",
+        text: "推荐",
+        url: "../../resources/recommend.png",
+        className: "nav-recommend"
+      },
+      {
+        name: "project",
+        text: "实战",
+        url: "../../resources/project.png",
+        className: "nav-project"
+      },
+      {
+        name: "path",
+        text: "路经",
+        url: "../../resources/path.png",
+        className: "nav-path"
+      },
+      {
+        name: "activity",
+        text: "活动",
+        url: "../../resources/activity.png",
+        className: "nav-activity"
+      },
+    ],
+    activityData: [], // 活动页数据
   },
   // 导航栏点击切换
   navTab(e) {
@@ -57,6 +84,18 @@ Page({
         that.setData({
           recommendItemData: res.data.data.recommendItemData,
           searchResultArr: res.data.data.recommendItemData,
+        })
+      }
+    })
+    // 请求获取活动页数据接口
+    wx.request({
+      url: 'https://www.fastmock.site/mock/3a01e0b34befd7cef6fcbfd3ab97ccf8/wechat/index/getActivityData',
+      header: {
+        "content-type": "application/json",
+      },
+      success(res) {
+        that.setData({
+          activityData: res.data.data.urls
         })
       }
     })

@@ -5,27 +5,19 @@
 </view>
 <!-- 导航栏 -->
 <view class="nav">
-  <view bindtap="navTab" data-name="recommend" class="nav-item nav-recommend {{currentNavName=='recommend'?'nav-item-active':''}}">
-    <image class="nav-item-img" src="../../resources/recommend.png" />推荐
-  </view>
-  <view bindtap="navTab" data-name="project" class="nav-item nav-project {{currentNavName=='project'?'nav-item-active':''}}">
-    <image class="nav-item-img" src="../../resources/project.png" />实战
-  </view>
-  <view bindtap="navTab" data-name="path" class="nav-item nav-path {{currentNavName=='path'?'nav-item-active':''}}">
-    <image class="nav-item-img" src="../../resources/path.png" />路径
-  </view>
-  <view bindtap="navTab" data-name="activity" class="nav-item nav-activity {{currentNavName=='activity'?'nav-item-active':''}}">
-    <image class="nav-item-img" src="../../resources/activity.png" />活动
+  <view wx:for="{{navData}}" wx:key="index" bindtap="navTab" data-name="{{item.name}}" class="nav-item {{item.className}} {{currentNavName==item.name?'nav-item-active':''}}">
+    <image class="nav-item-img" src="{{item.url}}" />{{item.text}}
   </view>
 </view>
+<!-- 推荐页——start -->
 <!-- 轮播图 -->
-<swiper class="swiper" autoplay="{{true}}" interval="3000" circular="{{true}}" previous-margin="56rpx" next-margin="56rpx" bindchange="swiperChange">
+<swiper hidden="{{currentNavName!='recommend'}}" class="swiper" autoplay="{{true}}" interval="3000" circular="{{true}}" previous-margin="56rpx" next-margin="56rpx" bindchange="swiperChange">
   <swiper-item wx:for="{{swiperImgUrl}}" wx:key="*this" item-id="{{index}}" class="swiper-item {{currentId==index?'swiper-item-active':''}}">
     <image class="swiper-item-img" src="{{item}}" />
   </swiper-item>
 </swiper>
-<!-- recommend -->
-<view class="recommend">
+<!-- 推荐课程 -->
+<view hidden="{{currentNavName!='recommend'}}" class="recommend">
   <view class="recommend-title">实战推荐</view>
   <view class="recommend-nodata" hidden="{{searchResultArr.length}}">(　ﾟдﾟ) 抱歉，暂无数据！</view>
   <view class="recommend-item" wx:for="{{searchResultArr}}" wx:key="index">
@@ -45,3 +37,11 @@
     </view>
   </view>
 </view>
+<!-- 推荐页——end -->
+<!-- 活动页——start -->
+<view hidden="{{currentNavName!='activity'}}" class="activity">
+  <view wx:for="{{activityData}}" wx:key="index" class="activity-item">
+    <image class="activity-item-img" src="{{item}}" />
+  </view>
+</view>
+<!-- 活动页——end -->
