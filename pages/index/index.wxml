@@ -36,6 +36,7 @@
       </view>
     </view>
   </view>
+  <view class="recommend-more" bindtap="more">查看更多</view>
 </view>
 <!-- 推荐页——end -->
 <!-- 活动页——start -->

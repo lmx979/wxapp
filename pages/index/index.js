@@ -60,6 +60,12 @@ Page({
       })
     })
   },
+  // 查看更多点击时触发
+  more() {
+    wx.navigateTo({
+      url: '../rank/rank',
+    })
+  },
   onLoad() {
     const that = this
     // 请求获取轮播图接口

@@ -230,6 +230,15 @@
   line-height: 32rpx;
 }
 
+.recommend-more {
+  text-align: center;
+  font-weight: bold;
+  font-size: 28rpx;
+  color: #37f;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
 .activity-item {
   display: flex;
   justify-content: center;

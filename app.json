@@ -2,15 +2,15 @@
   "pages": [
     "pages/index/index",
     "pages/cart/cart",
-    "pages/personal/personal"
+    "pages/personal/personal",
+    "pages/rank/rank"
   ],
   "tabBar": {
     "borderStyle": "black",
     "position": "bottom",
     "selectedColor": "#2b333b",
     "color": "#b7bbbf",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "./resources/home.png",
