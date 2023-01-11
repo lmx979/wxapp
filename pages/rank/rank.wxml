@@ -1,2 +1,26 @@
 <!--pages/rank/rank.wxml-->
-<text>pages/rank/rank.wxml</text>
+<!-- 排行种类 -->
+<view class="rank-category">
+  <view bindtap="categoryChange" id="project" class="rank-category-item {{currentCategory=='project'?'rank-category-active':''}}">
+    实战排行
+  </view>
+  <view bindtap="categoryChange" id="path" class="rank-category-item {{currentCategory=='path'?'rank-category-active':''}}">
+    路经排行
+  </view>
+</view>
+<!-- 排行条件 -->
+<view class="rank-date">
+  <view bindtap="dateChange" id="week" class="rank-date-item {{currentDate=='week'?'rank-date-active':''}}">周</view>
+  <view bindtap="dateChange" id="month" class="rank-date-item {{currentDate=='month'?'rank-date-active':''}}">月</view>
+</view>
+<!-- 排行内容 -->
+<view class="rank-content">
+  <view wx:for="{{rankData}}" wx:key="id" class="rank-content-item">
+    <image class="rank-content-item-img" src="{{item.img}}" />
+    <view class="rank-content-item-title">{{item.title}}</view>
+    <image wx:if="{{item.id==1}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211602431.png" />
+    <image wx:if="{{item.id==2}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211602130.png" />
+    <image wx:if="{{item.id==3}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211603672.png" />
+    <view wx:if="{{item.id>3}}" class="rank-content-item-number">{{item.id}}</view>
+  </view>
+</view>

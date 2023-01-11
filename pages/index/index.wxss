@@ -57,8 +57,8 @@
   height: 6rpx;
   border-radius: 5rpx;
   position: absolute;
-  left: 70rpx;
-  bottom: 18rpx;
+  left: calc(50% - 16rpx);
+  bottom: 24rpx;
 }
 
 /* nav导航栏各标签颜色变化——start */

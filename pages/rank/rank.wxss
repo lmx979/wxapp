@@ -1,1 +1,98 @@
 /* pages/rank/rank.wxss */
+.rank-category {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 88rpx;
+  box-shadow: 0 5rpx 18rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+.rank-category-item {
+  font-family: PingFangSC-Regular;
+  font-size: 36rpx;
+  color: #71777d;
+  position: relative;
+}
+
+.rank-category-active {
+  color: #2b333b;
+}
+
+.rank-category-active::after {
+  display: block;
+  content: "";
+  width: 32rpx;
+  height: 4rpx;
+  background: #f01414;
+  border-radius: 3rpx;
+  position: absolute;
+  left: calc(50% - 16rpx);
+}
+
+.rank-date {
+  width: 240rpx;
+  height: 64rpx;
+  margin: 50rpx auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1rpx solid #71777d;
+  border-radius: 5rpx;
+}
+
+.rank-date-item {
+  width: 112rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  text-align: center;
+  font-family: PingFangSc-Regular;
+  font-size: 30rpx;
+  color: #71777d;
+}
+
+.rank-date-active {
+  color: #fff;
+  background: #71777d;
+  border-radius: 5rpx;
+}
+
+.rank-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.rank-content-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+  position: relative;
+}
+
+.rank-content-item-img {
+  width: 180rpx;
+  height: 120rpx;
+  border-radius: 6rpx;
+  margin-right: 28rpx;
+}
+
+.rank-content-item-title {
+  font-family: PingFangSC-Regular;
+  font-size: 30rpx;
+  color: #2b333b;
+  width: 342rpx;
+}
+
+.rank-content-item-icon {
+  width: 60rpx;
+  height: 52rpx;
+  position: absolute;
+  right: 0;
+}
+
+.rank-content-item-number {
+  font-family: PingFangSC-Medium;
+  font-size: 36rpx;
+  color: #71777d;
+  position: absolute;
+  right: 20rpx;
+}
