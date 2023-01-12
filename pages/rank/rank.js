@@ -26,8 +26,8 @@ Page({
   onLoad() {
     const that = this
     // 获取用户之前记录的查看状态
-    let statusCategory = wx.getStorageSync('statusCategory')
-    let statusDate = wx.getStorageSync('statusDate')
+    let statusCategory = wx.getStorageSync('statusCategory') || that.data.currentCategory
+    let statusDate = wx.getStorageSync('statusDate') || that.data.currentDate
     this.setData({
       currentCategory: statusCategory,
       currentDate: statusDate
