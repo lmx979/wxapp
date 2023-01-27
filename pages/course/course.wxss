@@ -1,0 +1,16 @@
+/* pages/course/course.wxss */
+.course {
+  margin-top: 100rpx;
+}
+
+.course-img {
+  border-radius: 16rpx;
+  width: 750rpx;
+}
+
+.course-title {
+  font-weight: bold;
+  font-size: 60rpx;
+  margin-top: 50rpx;
+  text-align: center;
+}

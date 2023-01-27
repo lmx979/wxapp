@@ -15,7 +15,7 @@
 </view>
 <!-- 排行内容 -->
 <view class="rank-content">
-  <view wx:for="{{rankData}}" wx:key="id" class="rank-content-item">
+  <view wx:for="{{rankData}}" wx:key="id" class="rank-content-item" data-id="{{item.id}}" bindtap="rankContentItemTap">
     <image class="rank-content-item-img" src="{{item.img}}" />
     <view class="rank-content-item-title">{{item.title}}</view>
     <image wx:if="{{item.id==1}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211602431.png" />

@@ -1,0 +1,5 @@
+<!--pages/course/course.wxml-->
+<view class="course">
+  <image class="course-img" src="{{courseData.courseImg}}" />
+  <view class="course-title">{{courseData.courseTitle}}</view>
+</view>

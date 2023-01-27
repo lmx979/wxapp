@@ -23,6 +23,14 @@ Page({
     wx.setStorageSync('statusDate', e.currentTarget.id)
     this.onLoad()
   },
+  // 课程详情页跳转
+  rankContentItemTap(e) {
+    const courseId = e.currentTarget.dataset.id
+    const courseUrl = "/pages/course/course?id=" + courseId
+    wx.navigateTo({
+      url: courseUrl,
+    })
+  },
   onLoad() {
     const that = this
     // 获取用户之前记录的查看状态
